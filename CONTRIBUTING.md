@@ -6,4 +6,8 @@ If you don't yet have an Algorithmia account, [sign up](https://algorithmia.com/
 
 Then, select any third-party service you find interesting, and add whatever form of integration you feel would be most useful. We'll feature the best ones on our [blog](http://blog.algorithmia.com)!
 
+By the way:
+- please include a `README.md` describing what your contribution does, and how to run it
+- be careful not to include any API Keys or other secure information (it is common practice to use `YOUR_API_KEY` in code samples to represent an Algorithmia API Key
+
 Thanks for your help!
