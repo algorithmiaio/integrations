@@ -1,0 +1,26 @@
+> object getSentiment javascript
+  var sentiment = Math.floor(100*parseFloat(args[0],10));
+  var sentimentHistory = rs.getUservar(rs.currentUser(), "sentimentHistory");
+  if(sentimentHistory=="undefined") {sentimentHistory=[0,0];}
+  sentimentHistory.push(sentiment);
+  rs.setUservar(rs.currentUser(), "sentimentHistory", sentimentHistory);
+  return sentimentHistory
+< object
+
+> object getLastElement javascript
+  return _.last(this.httpData.MA.result);
+< object
+
++ *
+$ POST:SA https://api.algorithmia.com/v1/algo/nlp/SentimentAnalysis/1.0.3 {"headers": {"Content-Type": "application/json", "Authorization": "Simple YOUR_API_KEY"}, "body": {"document":"<star>"}}
+- <set input=<star>> {@movingaverage <call>getSentiment ${{SA.result.0.sentiment}}</call>}
+
++ movingaverage *
+$ POST:MA https://api.algorithmia.com/v1/algo/TimeSeries/ExponentialMovingAverage/0.1.0 {"headers": {"Content-Type": "application/json", "Authorization": "Simple YOUR_API_KEY"}, "body": [<star>]}
+- {@respond <call>getLastElement</call>}
+
++ respond *
+* <star> <= -30 => {topic=sentiments}{@veryangry}
+* <star> <= -10 => {topic=sentiments}{@angry}
+* <star> >= 30 => {topic=sentiments}{@happy}
+- {topic=sentiments}{@ok}

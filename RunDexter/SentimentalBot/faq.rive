@@ -1,0 +1,14 @@
++ [*] (hey|hi|hello|sup) [*]
+- Hey there! I'm here to answer your questions. {@help}
+
++ [*] (1|hours) [*]
+- We're open Monday to Friday, 8am-6pm Pacific Time {topic=default}
+
++ [*] (2|services) [*]
+- We host thousands of machine learning algorithms which work great with Dexter! {topic=default}
+
++ [*] (3|contact) [*]
+- Check us out at https://algorithmia.com and https://rundexter.com {topic=default}
+
++ [help] [*]
+- What would you like to hear about? ^buttons(Hours, Services, Contact Info) {topic=default}

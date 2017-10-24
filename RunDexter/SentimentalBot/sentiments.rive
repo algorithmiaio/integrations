@@ -1,0 +1,13 @@
++ happy
+- Great! Let's continue.\n\n\n{topic=faq}{@<get input>}
+
++ angry
+- Sorry things aren't working for you. I'll do my best to fix it!\n\n\n{topic=faq}{@<get input>}
+- Stick with me. We'll figure this out together.\n\n{topic=faq}{@<get input>}
+
++ veryangry
+- I realize this is frustrating. Can I apologize with a coupon for 20% off your next purchase?\n\n\n{topic=faq}{@<get input>}
+- It sounds like I'm not doing a good job of fixing the problem. Would it be easier for us to call you?\n\n{topic=faq}{@<get input>}
+
++ ok
+- {topic=faq}{@<get input>}
