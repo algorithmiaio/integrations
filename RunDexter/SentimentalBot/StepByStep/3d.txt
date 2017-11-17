@@ -1,0 +1,7 @@
++ *
+$ POST:SA https://api.algorithmia.com/v1/algo/nlp/SentimentAnalysis/1.0.3 {"headers": {"Content-Type": "application/json", "Authorization": "Simple simjvRFrigTudCBoknDIhFap+YQ1"}, "body": {"document":"<star>"}}
+- <set input=<star>> {@movingaverage <call>getSentiment ${{SA.result.0.sentiment}}</call>}
+
++ movingaverage *
+$ POST:MA https://api.algorithmia.com/v1/algo/TimeSeries/ExponentialMovingAverage/0.1.0 {"headers": {"Content-Type": "application/json", "Authorization": "Simple simjvRFrigTudCBoknDIhFap+YQ1"}, "body": [<star>]}
+- ${{MA.result}}

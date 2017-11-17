@@ -1,0 +1,9 @@
++ movingaverage *
+$ POST:MA https://api.algorithmia.com/v1/algo/TimeSeries/ExponentialMovingAverage/0.1.0 {"headers": {"Content-Type": "application/json", "Authorization": "Simple YOUR_API_KEY"}, "body": [<star>]}
+- {@respond <call>getLastElement</call>}
+
++ respond *
+* <star> <= -30 => {topic=sentiments}{@veryangry}
+* <star> <= -10 => {topic=sentiments}{@angry}
+* <star> >= 30 => {topic=sentiments}{@happy}
+- {topic=sentiments}{@ok}

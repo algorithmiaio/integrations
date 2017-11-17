@@ -1,0 +1,8 @@
+> object getSentiment javascript
+  var sentiment = Math.floor(100*parseFloat(args[0],10));
+  var sentimentHistory = rs.getUservar(rs.currentUser(), "sentimentHistory");
+  if(sentimentHistory=="undefined") {sentimentHistory=[0,0];}
+  sentimentHistory.push(sentiment);
+  rs.setUservar(rs.currentUser(), "sentimentHistory", sentimentHistory);
+  return sentimentHistory
+< object

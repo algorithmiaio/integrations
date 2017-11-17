@@ -1,0 +1,3 @@
++ *
+$ POST:SA https://api.algorithmia.com/v1/algo/nlp/SentimentAnalysis/1.0.3 {"headers": {"Content-Type": "application/json", "Authorization": "Simple YOUR_API_KEY"}, "body": {"document":"<star>"}}
+- <set input=<star>> ${{SA.result.0.sentiment}}

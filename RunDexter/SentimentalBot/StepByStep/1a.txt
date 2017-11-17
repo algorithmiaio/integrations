@@ -1,0 +1,2 @@
++ *
+- Welcome!\n <set input=<star>> {topic=faq}{@<star>}

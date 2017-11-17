@@ -1,0 +1,1 @@
+- <call>getSentiment ${{SA.result.0.sentiment}}</call>
