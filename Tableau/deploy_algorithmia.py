@@ -1,17 +1,18 @@
-API_KEY = 'YOUR_API_KEY'
-debug = True
+ALGORITHMIA_API_KEY = 'YOUR_API_KEY'
+TABPY_SERVER_URL = 'http://localhost:9004/'
+DEBUG = True
 
 import Algorithmia
 import tabpy_client
 
-tabpy_conn = tabpy_client.Client("http://localhost:9004/")
+tabpy_conn = tabpy_client.Client(TABPY_SERVER_URL)
 global algorithmia_client
 algorithmia_client = None
 
 def get_client():
     global algorithmia_client
     if algorithmia_client is None:
-        algorithmia_client = Algorithmia.client(API_KEY)
+        algorithmia_client = Algorithmia.client(ALGORITHMIA_API_KEY)
     return algorithmia_client
 
 
@@ -22,7 +23,7 @@ def raise_exception(error):
     raise x
 
 def print_debug(message):
-    if debug:
+    if DEBUG:
         print(message)
 
 def algorithmia(algorithm_name, input):
