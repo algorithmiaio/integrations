@@ -1,3 +1,2 @@
 algorithmia
-tableau_tools
-future
+# also run startup.sh from https://github.com/tableau/TabPy
