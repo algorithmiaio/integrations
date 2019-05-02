@@ -26,6 +26,12 @@ def print_debug(message):
     if DEBUG:
         print(message)
 
+# EXAMPLE CALL FROM TABLEAU:
+# SCRIPT_REAL(
+#   "return tabpy.query('algorithmia',_arg1,[_arg2,3])['response']",
+#   "TimeSeries/SimpleMovingAverage/0.2.0",
+#   ATTR([timeseries_data])
+# )
 def algorithmia(algorithm_name, input):
     if isinstance(algorithm_name, list):
         algorithm_name = algorithm_name[0]
@@ -39,7 +45,12 @@ def algorithmia(algorithm_name, input):
     print_debug("result: %s"%result)
     return result
 
-
+# EXAMPLE CALL FROM TABLEAU:
+# SCRIPT_STR(
+#   "return tabpy.query('algorithmia_each',_arg1,_arg2)['response']",
+#   "demo/Hello",
+#   ATTR([singular_data])
+# )
 def algorithmia_each(algorithm_name, input):
     if isinstance(algorithm_name, list):
         algorithm_name = algorithm_name[0]
