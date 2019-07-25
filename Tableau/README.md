@@ -39,3 +39,7 @@ ATTR([Longitude]),
 ATTR([Time])
 )
 ```
+
+4. (optional) create wrapper functions and
+   [save them in the TabPy server](./tabpy_saved_functions) to simplify 
+   your code and hide your API Keys
