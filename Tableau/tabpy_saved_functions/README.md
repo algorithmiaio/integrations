@@ -7,8 +7,8 @@ worksheet, and allows you to hide your Algorithmia API Key so that it is
 not saved within the worksheet itself.
 
 First, modify and run the code in
-[deploy_saved_function.py](deploy_saved_function.py) -- this injects the
-wrapper code into your running TabPy instance.
+[deploy_saved_function_tabpy.py](deploy_saved_function_tabpy.py) -- this
+injects the wrapper code into your running TabPy instance.
 
 Then, modify the code in your Tableau worksheet so that it calls the
 wrapper function, e.g.:
