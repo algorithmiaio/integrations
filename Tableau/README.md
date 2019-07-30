@@ -8,8 +8,8 @@ you can take these visualizations to another level, enhancing them with
 machine learning models developed in-house or provided by independent
 developers on the Algorithmia.com marketplace.
 
-For complete details, see the blogpost
-[(coming soon)](https://blog.algorithmia.com) -- but in a nutshell:
+For complete details, see the [blogpost]
+(https://www.tableau.com/about/blog/2019/7/enrich-data-tableau-machine-learning-using-algorithmia) -- but in a nutshell:
 
 1. Create a Tableau worksheet and bring in the data you'll be analyzing
 
