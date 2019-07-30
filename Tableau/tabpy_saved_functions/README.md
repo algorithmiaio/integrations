@@ -13,6 +13,22 @@ injects the wrapper code into your running TabPy instance.
 Then, modify the code in your Tableau worksheet so that it calls the
 wrapper function, e.g.:
 
+```
+SCRIPT_INT("
+import math
+algoname = 'jhurliman/SunMoonCalculator/0.1.0'
+if _arg1[0] and _arg2[0]:
+    input = {'lat': _arg1, 'lon': _arg2, 'time': _arg3}
+    rads = tabpy.query('algorithmia', algoname, input)['response']['sun_altitude']
+    return int(math.degrees(rads))
+else:
+    return 0			
+",
+ATTR([Latitude]),
+ATTR([Longitude]),
+ATTR([Time])
+)
+```
 
 ```
 SCRIPT_REAL(
