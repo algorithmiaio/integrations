@@ -16,6 +16,8 @@ This integration allows you to stream operational metrics as well as
 user-defined, inference-related metrics from Algorithmia to Kafka to the metrics
 API in Datadog.
 
+![Algorithmia Insights in Datadog](https://raw.githubusercontent.com/algorithmiaio/integrations/master/Datadog/images/algorithmia-datadog.png)
+
 ## Using this Algorithmia + Datadog integration
 
 1. Install Python.
