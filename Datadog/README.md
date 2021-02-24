@@ -71,5 +71,5 @@ API in Datadog.
 ## Additional resources
 
 Refer to the documentation at
-https://github.com/DataDog/integrations-extras/algorithmia for more information
+https://github.com/DataDog/integrations-extras/tree/master/algorithmia for more information
 about this integration, including sample dashboards and monitors.
